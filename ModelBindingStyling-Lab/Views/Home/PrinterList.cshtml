@@ -4,48 +4,61 @@
     ViewData["Title"] = "Printer List";
 }
 
-<h1>PrinterList</h1>
+<div class="p-3 text-primary-emphasis bg-success border border-primary-subtle rounded-3">
+    <h1 class="text-center">Printer List</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.SKU)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BuildVolume)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PrinterImage)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SKU)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BuildVolume)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrinterImage)
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+        <p class="d-inline-flex gap-1">
+            <a class="btn btn-light" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Products
+            </a>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.SKU)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Title)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Price)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.BuildVolume)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.PrinterImage)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                @foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SKU)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BuildVolume)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PrinterImage)
+                            </td>
+                        </tr>
+                }
+                    </tbody>
+                </table>
+            </div>
+        ?</div>
+    </div>
+</div>
